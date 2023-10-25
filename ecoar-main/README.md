@@ -1,1 +1,0 @@
-# prja-school

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<link
+	href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet"
+/>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EcoAr</title>
+		<link rel="stylesheet" href="./styles/style.css" />
+	</head>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<style>
+				body {
+					font-family: 'Arial', sans-serif;
+					background-color: #f4f4f4;
+					margin: 0;
+					padding: 0;
+				}
+
+				.container {
+					background-color: #fff;
+					border-radius: 10px;
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+					padding: 20px;
+					margin: 20px; /* Ajuste a margem aqui */
+					max-width: 600px;
+				}
+
+				h2 {
+					color: #333;
+				}
+
+				p {
+					margin: 0;
+					color: #555;
+				}
+
+				select {
+					width: 100%;
+					padding: 10px;
+					margin-top: 10px;
+					box-sizing: border-box;
+				}
+
+				button {
+					background-color: #4caf50;
+					color: #fff;
+					padding: 10px 20px;
+					border: none;
+					border-radius: 5px;
+					cursor: pointer;
+				}
+
+				button:hover {
+					background-color: #45a049;
+				}
+
+				#mensagemCompra {
+					margin-top: 20px;
+					font-size: 18px;
+					color: #4caf50;
+					display: none;
+				}
+
+				button,
+				#mensagemCompra {
+					transition: background-color 0.3s;
+				}
+			</style>
+			<meta charset="UTF-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>Detalhes da Compra</title>
+			<link
+				href="https://fonts.googleapis.com/icon?family=Material+Icons"
+				rel="stylesheet"
+			/>
+		</head>
+
+		<body class="body">
+			<header>
+				<nav class="nav">
+					<h1 class="text_">EcoAr</h1>
+					<a class="barra">|</a>
+					<a class="inicio" href="index.html"> Home </a>
+					<a class="barra">|</a>
+					<a class="cabecalho__menu__link" href="comprar.html"> Comprar </a>
+					<a class="barra">|</a>
+					<a class="material-icons" href="perfil.html">person</a>
+				</nav>
+			</header>
+
+			<div class="container" id="detalhesCompra">
+				<h2>Detalhes da Compra</h2>
+				<p>Produto: <span id="produtoNome"></span></p>
+				<p>Total: R$40.00</p>
+				<p>Forma de Pagamento:</p>
+				<select>
+					<option value="credito">Cartão de Crédito</option>
+					<option value="debito">Cartão de Débito</option>
+					<option value="boleto">Boleto Bancário</option>
+				</select>
+				<br /><br />
+				<button onclick="efetuarCompra()">Comprar</button>
+				<div
+					id="mensagemCompra"
+					style="
+						margin-top: 20px;
+						font-size: 18px;
+						color: green;
+						display: none;
+						color: #000;
+					"
+				></div>
+				<br /><br />
+				<button onclick="goBack()">Voltar</button>
+			</div>
+
+			<footer></footer>
+
+			<script>
+				// Recupera o parâmetro 'produto' da URL
+				var urlParams = new URLSearchParams(window.location.search);
+				var produto = urlParams.get('produto');
+
+				// Atualiza o conteúdo da página com o nome do produto
+				document.getElementById('produtoNome').innerText = produto;
+
+				// Função para voltar à página anterior
+				function goBack() {
+					window.history.back();
+				}
+
+				// Função para simular a compra e exibir mensagem
+				function efetuarCompra() {
+					// Simula a lógica de compra (pode ser substituída por chamada a API, etc.)
+				}
+			</script>
+		</body>
+	</html>
+</html>

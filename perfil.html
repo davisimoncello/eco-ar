@@ -1,60 +1,125 @@
 <!DOCTYPE html>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Perfil</title>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				font-family: 'Arial', sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f4f4;
+			}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
+			.container {
+				margin: 20px;
+				padding: 20px;
+				background-color: white;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+			}
 
-<body class="body">
-  <header>
-    <nav class="nav">
-        <h1 class="text_">
-            EcoAr
-        </h1>
-        <a class="barra">|</a>
-        <a class="inicio" href="index.html">
-            Home
-        </a>
-            <a class="barra">|</a>
-        <a class="cabecalho__menu__link" href="comprar.html">
-            Comprar
-        </a>
-            <a class="barra">|</a>
-        <a class="material-icons" href="perfil.html">person</a>
-    </nav>
-</header>
+			.perfil {
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+			}
 
-    <!-- </header>
-    <div class="container">
-      <h2>Formulário de Compra</h2>
-      <form action="#">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <input type="submit" value="Comprar">
-        </div>
-      </form>
-    </div> -->
-      
-    <div class="container_">
-      <a class="material-icons">person</a>
-      <div class="nome">Nome do Usuário</div>
-      <div class="email">usuario@email.com</div>
-    </div>
+			.perfil .material-icons {
+				font-size: 50px;
+				margin-right: 20px;
+				color: #294459;
+			}
 
-    <footer>
-        
-    </footer>
-</body>
+			.nome {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			.email {
+				color: #666;
+			}
+
+			.secao {
+				margin-top: 20px;
+			}
+
+			.secao h3 {
+				border-bottom: 2px solid #294459;
+				padding-bottom: 5px;
+			}
+
+			.informacoes {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.info-item {
+				flex: 1;
+				margin: 10px;
+				padding: 15px;
+				background-color: #fff;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				border-radius: 8px;
+			}
+
+			footer {
+				background-color: #294459;
+				color: white;
+				text-align: center;
+				padding: 10px;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<nav class="nav">
+				<h1 class="text_">EcoAr</h1>
+				<a class="barra">|</a>
+				<a class="inicio" href="index.html"> Home </a>
+				<a class="barra">|</a>
+				<a class="cabecalho__menu__link" href="comprar.html"> Comprar </a>
+				<a class="barra">|</a>
+				<a class="material-icons" href="perfil.html">person</a>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="perfil">
+				<a class="material-icons">person</a>
+				<div>
+					<div class="nome">Nome do Usuário</div>
+					<div class="email">usuario@email.com</div>
+				</div>
+			</div>
+
+			<div class="secao">
+				<h3>Informações Pessoais</h3>
+				<div class="informacoes">
+					<div class="info-item">Telefone: (123) 456-7890</div>
+					<div class="info-item">Endereço: Rua Exemplo, 123</div>
+					<div class="info-item">Cidade: Cidade Exemplo</div>
+				</div>
+			</div>
+
+			<div class="secao">
+				<h3>Pedidos Recentes</h3>
+				<p>Ainda não há pedidos realizados.</p>
+			</div>
+		</div>
+
+		<footer>© 2023 EcoAr. Todos os direitos reservados.</footer>
+	</body>
 </html>
